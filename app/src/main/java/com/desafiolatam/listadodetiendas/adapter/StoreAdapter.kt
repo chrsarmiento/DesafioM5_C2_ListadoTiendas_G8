@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.desafiolatam.listadodetiendas.R
 import com.desafiolatam.listadodetiendas.databinding.ItemStoreBinding
 import com.desafiolatam.listadodetiendas.model.Store
 
@@ -23,6 +24,7 @@ class StoreAdapter(
                     Glide.with(imageViewStore.context)
                         .load(store.photo)
                         .centerCrop()
+                        .error(R.drawable.baseline_error_outline_24)
                         .into(binding.imageViewStore)
                 }
 

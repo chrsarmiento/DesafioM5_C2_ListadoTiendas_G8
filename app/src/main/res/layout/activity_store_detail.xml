@@ -6,13 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewStore"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageViewStore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Tienda"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:drawableStart="@drawable/baseline_map_24"
+                android:drawablePadding="10dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStoreName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreOfficeHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horario de Atención"
+                android:drawableStart="@drawable/outline_watch_later_24"
+                android:drawablePadding="10dp"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStoreAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewStoreHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historia"
+                android:textSize="18sp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewStoreOfficeHours"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
